@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
+import { RetosModule } from './retos/retos.module';
 
 @Module({
-  imports: [],
+  imports: [RetosModule],
   controllers: [],
   providers: [],
   exports: [],
