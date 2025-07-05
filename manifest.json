@@ -1,0 +1,21 @@
+{
+  "name": "Verdad o Reto",
+  "short_name": "Verdad o Reto",
+  "description": "Juego de Verdad o Reto interactivo",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a5f2b",
+  "theme_color": "#1a5f2b",
+  "icons": [
+    {
+      "src": "icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
