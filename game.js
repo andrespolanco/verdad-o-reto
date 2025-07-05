@@ -34,6 +34,17 @@ const siguienteBtn = document.getElementById('siguiente');
 const timerElement = document.getElementById('timer');
 const challengeButtons = document.querySelector('.challenge-buttons');
 
+// Deshabilitar zoom en dispositivos móviles
+document.addEventListener('gesturestart', function (e) {
+    e.preventDefault();
+    document.body.style.zoom = 0.99; // Necesario para algunos navegadores
+});
+
+document.addEventListener('gesturechange', function (e) {
+    e.preventDefault();
+    document.body.style.zoom = 0.99;
+});
+
 // Variables del juego
 let timer;
 let timeLeft = 30;
