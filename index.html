@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verdad o Reto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="table">
+        <div class="card" id="card">
+            <div class="card-content">
+                <h1>Verdad o Reto</h1>
+                <p id="challenge-text">Haz clic en un botón para comenzar</p>
+                <div class="timer" id="timer">30</div>
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <div class="challenge-buttons">
+                <button id="verdad" class="btn verdad-btn">Verdad</button>
+                <button id="reto" class="btn reto-btn">Reto</button>
+            </div>
+            <button id="siguiente" class="btn siguiente-btn" style="display: none;">Siguiente</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

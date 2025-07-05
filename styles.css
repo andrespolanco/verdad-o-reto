@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos base */
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a5f2b;
+    background-image: url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.table {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    min-height: 70vh;
+    max-height: 90vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border: 10px solid #5d4037;
+    box-sizing: border-box;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.card {
+    background-color: white;
+    width: 100%;
+    max-width: 600px;
+    min-height: 200px;
+    max-height: 60%;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    overflow-y: auto;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.card-content {
+    transform: translateZ(50px);
+}
+
+.card h1 {
+    color: #d32f2f;
+    margin: 10px 0 15px 0;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    line-height: 1.2;
+}
+
+#challenge-text {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    color: #333;
+    margin: 10px 0 20px 0;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    overflow-y: auto;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 1.4;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.challenge-buttons {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.verdad-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.verdad-btn:hover {
+    background-color: #388e3c;
+    transform: translateY(-3px);
+}
+
+.reto-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.reto-btn:hover {
+    background-color: #d32f2f;
+    transform: translateY(-3px);
+}
+
+.siguiente-btn {
+    background-color: #2196f3;
+    color: white;
+    margin-top: 10px;
+    width: 200px;
+    display: none;
+}
+
+.siguiente-btn.visible {
+    display: block;
+}
+
+.siguiente-btn:hover {
+    background-color: #1976d2;
+    transform: translateY(-3px);
+}
+
+.timer {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    width: 60px;
+    height: 60px;
+    background-color: #ffc107;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive design */
+/* Estilos para tablets */
+@media (max-width: 1024px) {
+    .table {
+        width: 95%;
+        min-height: 80vh;
+    }
+    
+    .card {
+        padding: 15px;
+    }
+    
+    .buttons {
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .challenge-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+    
+    .siguiente-btn {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+
+/* Estilos para móviles */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .table {
+        width: 100%;
+        min-height: 85vh;
+        padding: 10px;
+        border-width: 8px;
+    }
+    
+    .card {
+        width: 100%;
+        min-height: 40%;
+        padding: 15px 10px;
+    }
+    
+    .card h1 {
+        font-size: 1.8rem;
+        margin: 5px 0 10px 0;
+    }
+    
+    #challenge-text {
+        font-size: 1.1rem;
+        min-height: 70px;
+        margin: 5px 0 15px 0;
+    }
+    
+    .buttons {
+        margin-top: 15px;
+        width: 100%;
+    }
+    
+    .challenge-buttons {
+        width: 100%;
+    }
+    
+    .btn {
+        padding: 12px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .timer {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        top: -15px;
+        right: -15px;
+    }
+}
+}
